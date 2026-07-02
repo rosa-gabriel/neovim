@@ -20,8 +20,7 @@ return {
         })
 
 		require("mason-lspconfig").setup({
-            -- , "jdtls"
-			ensure_installed = { "lua_ls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls", "pyright", "eslint_d", "xmlformatter", "google-java-format", "jdtls", "roslyn" },
+			ensure_installed = { "lua_ls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls", "pyright", "jdtls" },
 			automatic_installation = true,
 		})
 	end,
