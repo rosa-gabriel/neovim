@@ -11,11 +11,17 @@ return {
 	},
 	config = function()
 		require("fidget").setup({})
-		require("mason").setup()
+		require("mason").setup({
+            fetch_registry_timeout = 1200000,
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:Crashdummyy/mason-registry",
+            },
+        })
 
 		require("mason-lspconfig").setup({
             -- , "jdtls"
-			ensure_installed = { "lua_ls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls", "pyright" },
+			ensure_installed = { "lua_ls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls", "pyright", "eslint_d", "xmlformatter", "google-java-format", "jdtls", "roslyn" },
 			automatic_installation = true,
 		})
 	end,
