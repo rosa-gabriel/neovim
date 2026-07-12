@@ -1,5 +1,5 @@
 function ColorMyPencils(theme, transparent, color)
-    color = color or "kanagawa";
+    color = color or "gruvbox";
     vim.o.background = theme;
     vim.cmd.colorscheme(color);
 
@@ -10,8 +10,8 @@ function ColorMyPencils(theme, transparent, color)
 end
 
 return {
-    "rebelot/kanagawa.nvim",
+    "sainnhe/gruvbox-material",
     config = function()
-        ColorMyPencils("dark", false, "kanagawa");
+        ColorMyPencils("dark", false, "gruvbox-material");
     end,
 }

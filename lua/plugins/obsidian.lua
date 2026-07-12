@@ -1,6 +1,6 @@
 return {
 	"obsidian-nvim/obsidian.nvim",
-	version = "*", -- use latest release, remove to use latest commit
+	version = "*",
 	config = function()
 		require("fidget").setup({})
 		require("mason").setup()

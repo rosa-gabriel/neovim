@@ -5,7 +5,6 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		"hrsh7th/cmp-nvim-lsp",
 		"L3MON4D3/LuaSnip",
-		-- "mfussenegger/nvim-jdtls",
 		"j-hui/fidget.nvim",
         "neovim/nvim-lspconfig"
 	},
@@ -19,8 +18,16 @@ return {
             },
         })
 
+        local programming = false
+
+        local install = { "lua_ls", "stylua" }
+
+        if programming then
+            install = { "lua_ls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls", "pyright", "jdtls" }
+        end
+
 		require("mason-lspconfig").setup({
-			ensure_installed = { "lua_ls", "gopls", "rust_analyzer", "ruff", "stylua", "ts_ls", "pyright", "jdtls" },
+			ensure_installed = install,
 			automatic_installation = true,
 		})
 	end,
